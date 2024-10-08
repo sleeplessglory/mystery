@@ -1,0 +1,11 @@
+@use '../util';
+h1 {
+    //font-size: 28px; => for a mobile device (e.g. width = 360px) 28px/360px=0.0777...=7.8vw (28px = 7.8vw)
+    font-size: clamp(util.rem(28), util.rem(16) + 2vw, util.rem(40));
+}
+h2 {
+    font-size: clamp(util.rem(22), util.rem(14) + 1.5vw, util.rem(36));
+}
+h3 {
+    font-size: clamp(util.rem(16), util.rem(12) + 1vw, util.rem(32));
+}
