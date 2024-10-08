@@ -1,0 +1,27 @@
+@use '../util';
+.grid {
+    display: grid;
+    grid-template-rows: 2fr 8fr 1fr 1fr 8fr 2fr;
+    gap: util.rem(25);
+    &__name {
+
+    }
+    &__leaders {
+
+    }
+    &__info {
+        display: flex;
+        &__blocks {
+
+        }
+        &__coins {
+
+        }
+        &__invites {
+
+        }
+    }
+    &__time {
+        display: flex;
+    }
+}
