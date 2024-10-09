@@ -7,7 +7,8 @@ export default {
     output: {
         path: path.resolve('build'),
         filename: 'bundle.js',
-        clean: true //clean the directory before each build
+        clean: true, //clean the directory before each build
+        publicPath: "/mystery/"
     },
     resolve: {
         extensions: ['.js', '.jsx'], //automatically resolve extensions
@@ -50,7 +51,9 @@ export default {
     devServer: {
         static: './build', //serve files from "build"
         port: 3000, //development server port
-        open: true
+        open: true,
+        hot: true //changes are applied without page reload
     },
-    mode: 'development',
+    //mode: 'development'
+    mode: 'production',
 };
