@@ -1,27 +1,52 @@
 @use '../util';
+@use 'sass:math';
 .grid {
     display: grid;
     grid-template-rows: 2fr 8fr 1fr 1fr 8fr 2fr;
-    gap: util.rem(25);
+    gap: util.rem(10);
+    background-color: rgb(97, 41, 123);
+    width: 90vw;
+    margin-inline: auto;
+    padding: util.rem(12);
     &__name {
-
+        align-content: center;
+        text-align: center;
+        background-color: rgb(67, 27, 85);
+        font-weight: 700;
+        font-size: clamp(util.rem(20), util.rem(16) + 1vw, util.rem(32));
+        color: rgb(255, 255, 255);
     }
     &__leaders {
-
+        background-color: rgb(67, 27, 85);
+    }
+    &__info, &__time {
+        display: inherit;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        /*display: flex;
+        justify-content: space-evenly;*/
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        background-color: rgb(36, 15, 46);
+        border-radius: util.rem(16);
+        padding: util.rem(2) 0 util.rem(2);
     }
     &__info {
-        display: flex;
-        &__blocks {
-
-        }
-        &__coins {
-
-        }
-        &__invites {
-
+        &.blocks, &.coins, &.invites {
+            display: block;
+            border: none;
         }
     }
     &__time {
-        display: flex;
+        &.hour, &.day, &.week {
+            display: block;
+            border: none;
+        }
+    }
+    &__results {
+
+    }
+    &__user-result {
+        background-color: rgb(36, 15, 46);
     }
 }

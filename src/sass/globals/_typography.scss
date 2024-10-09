@@ -9,3 +9,6 @@ h2 {
 h3 {
     font-size: clamp(util.rem(16), util.rem(12) + 1vw, util.rem(32));
 }
+h4 {
+    font-size: clamp(util.rem(12), util.rem(10) + 0.5vw, util.rem(28));
+}
