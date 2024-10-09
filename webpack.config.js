@@ -55,5 +55,5 @@ export default {
         hot: true //changes are applied without page reload
     },
     //mode: 'development'
-    mode: 'production',
+    mode: 'production'
 };

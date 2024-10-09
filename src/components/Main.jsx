@@ -1,13 +1,59 @@
 import React, {useRef} from 'react';
 import userAvatar from '../assets/bird.jpg';
+/**
+ * @component
+ * @function Main
+ * @returns {JSX.Element} All the elements of the main game layout accordingly.
+ * @description Contains the main game layout for navigation bar sections.
+ */
 export default function Main() {
+    /**
+     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @description A useRef() hook reference to a "blocks" button.
+     * This reference is used to highlight the button while handling user clicks.
+     */
     const blocksRef = useRef(null);
+
+    /**
+     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @description A useRef() hook reference to a "coins" button.
+     * This reference is used to highlight the button while handling user clicks.
+     */
     const coinsRef = useRef(null);
+
+    /**
+     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @description A useRef() hook reference to an "invites" button.
+     * This reference is used to highlight the button while handling user clicks.
+     */
     const invitesRef = useRef(null);
+
+    /**
+     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @description A useRef() hook reference to an "hour" button.
+     * This reference is used to highlight the button while handling user clicks.
+     */
     const hourRef = useRef(null);
+
+    /**
+     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @description A useRef() hook reference to a "day" button.
+     * This reference is used to highlight the button while handling user clicks.
+     */
     const dayRef = useRef(null);
+
+    /**
+     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @description A useRef() hook reference to a "week" button.
+     * This reference is used to highlight the button while handling user clicks.
+     */
     const weekRef = useRef(null);
 
+    /**
+     * @function handleInfoClick
+     * @param {Event} event The click event triggered by users.
+     * @description Handles user clicks on the buttons of the first sorting bar. Highlights the clicked button.
+     */
     function handleInfoClick(event) {
         switch(true) {
             case event.target === blocksRef.current:
@@ -27,6 +73,12 @@ export default function Main() {
                 break;
         }
     }
+
+    /**
+     * @function handleTimeClick
+     * @param {Event} event The click event triggered by users.
+     * @description Handles user clicks on the buttons of the second sorting bar. Highlights the clicked button.
+     */
     function handleTimeClick(event) {
         switch(true) {
             case event.target === hourRef.current:

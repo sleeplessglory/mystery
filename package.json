@@ -1,6 +1,6 @@
 {
   "homepage": "https://sleeplessglory.github.io/mystery/",
-  "name": "game",
+  "name": "mystery",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
