@@ -8,42 +8,42 @@ import userAvatar from '../assets/bird.jpg';
  */
 export default function Main() {
     /**
-     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to a "blocks" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const blocksRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to a "coins" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const coinsRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to an "invites" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const invitesRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to an "hour" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const hourRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to a "day" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const dayRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElementl>} Initially is null.
+     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to a "week" button.
      * This reference is used to highlight the button while handling user clicks.
      */
@@ -101,11 +101,37 @@ export default function Main() {
     return(
         <div className="grid">
             <div className="grid__head">
-                <div className="grid__head name">Rating</div>
-                <button className="grid__head info">i</button>
+                <div className="grid__head--name">Rating</div>
+                <button className="grid__head--info">i</button>
             </div>
             <div className="grid__leaders">
-
+                <div className="grid__leaders__first">
+                    {/*<img src={getAvatar} />*/}
+                    <img src={userAvatar} title="Winner" alt="Winner" />
+                    <div className="place">1</div>
+                    {/*<div className="name">{userName}</div>*/}
+                    <div className="name">Amy Shepard</div>
+                    {/*<div className="first-score">{totalScore}</div>*/}
+                    <div className="first-score">584</div>
+                </div>
+                <div className="grid__leaders__second">
+                    {/*<img src={getAvatar} />*/}
+                    <img src={userAvatar} title="Winner" alt="Winner" />
+                    <div className="place">2</div>
+                    {/*<div className="name">{userName}</div>*/}
+                    <div className="name">M4XXX_P4YN3</div>
+                    {/*<div className="first-score">{totalScore}</div>*/}
+                    <div className="second-score">560</div>
+                </div>
+                <div className="grid__leaders__third">
+                    {/*<img src={getAvatar} />*/}
+                    <img src={userAvatar} title="Winner" alt="Winner" />
+                    <div className="grid__leaders__third--place">3</div>
+                    {/*<div className="name">{userName}</div>*/}
+                    <div className="grid__leaders__third--name">KevinBacon416</div>
+                    {/*<div className="first-score">{totalScore}</div>*/}
+                    <div className="grid__leaders__third--third-score">515</div>
+                </div>
             </div>
             <div className="grid__info">
                 <button className="grid__info blocks"  ref={blocksRef}  onClick={handleInfoClick}>Blocks</button>
@@ -119,9 +145,10 @@ export default function Main() {
             </div>
             <div className="grid__results"></div>
             <div className="grid__user-result">
-                {/**<div className="grid__user-result place">{userPlace}</div>*/}
+                {/*<div className="grid__user-result place">{userPlace}</div>*/}
                 <div className="grid__user-result place">100+</div>
                 <div className="grid__user-result avatar">
+                    {/*<img src={getAvatar} />*/}
                     <img src={userAvatar} title="User avatar" alt="User avatar"/>
                 </div>
                 <div className="grid__user-result name">You</div>

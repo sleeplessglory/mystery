@@ -4,7 +4,7 @@
     display: grid;
     grid-template-rows: 2fr 8fr 1fr 1fr 8fr 2fr;
     gap: f.rem(10);
-    background-color: rgb(97, 41, 123);
+    background-color: rgb(60, 50, 100);
     width: 90vw;
     min-width: f.rem(230);
     margin: f.rem(40) auto f.rem(40);
@@ -17,49 +17,85 @@
         text-align: center;*/
         justify-content: center;
         align-items: center;
-        background-color: rgb(67, 27, 85);
+        background-color: rgba(49, 41, 78, 0.75);
         font-weight: 700;
         font-size: clamp(f.rem(20), f.rem(16) + 1vw, f.rem(28));
         color: rgb(255, 255, 255);
         border-radius: f.rem(20);
         position: relative;
-        &.name, &.info {
+        &--name, &--info {
+            @extend .grid__head;
             position: absolute;
         }
-        &.info {
+        &--info {
             right: clamp(f.rem(20), f.rem(16) + 4vw, f.rem(60));
             width: f.rem(30);
             height: f.rem(30);
             background-color: rgba(255, 255, 255, 0.7);
-            color: rgb(67, 27, 85);
+            color: rgba(49, 41, 78, 0.75);
             text-align: center;
             border: none;
         }
     }
     &__leaders {
-        background-color: rgb(67, 27, 85);
+        background-color: rgba(49, 41, 78, 0.75);
         border-radius: f.rem(20);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        &__first, &__second, &__third {
+            position: absolute;
+            background-color: rgb(39, 32, 63);
+            bottom: f.rem(15);
+            width: f.rem(120);
+        }
+        &__first {
+            height: f.rem(155);
+            img {
+                height: f.rem(60);
+                position: absolute;
+                bottom: f.rem(60);
+            }
+        }
+        &__second {
+            height: f.rem(140);
+            left: f.rem(15);
+            img {
+                height: f.rem(45);
+                position: absolute;
+                bottom: f.rem(60);
+            }
+        }
+        &__third {
+            height: f.rem(125);
+            right: f.rem(15);
+            img {
+                height: f.rem(45);
+                position: absolute;
+                bottom: f.rem(60);
+            }
+        }
     }
     &__info, &__time {
         display: inherit;
         grid-template-columns: 1fr 1fr 1fr;
-        text-align: center;
         color: rgb(255, 255, 255);
         font-weight: 600;
         font-size: clamp(f.rem(10), f.rem(8) + 1vw, f.rem(18));
-        background-color: rgb(36, 15, 46);
+        background-color: rgb(37, 30, 61);
         border-radius: f.rem(16);
     }
     &__info {
         &.blocks, &.coins, &.invites {
             display: block;
-            border: f.rem(4) solid rgb(36, 15, 46);
+            border: f.rem(4) solid rgb(37, 30, 61);
         }
     }
     &__time {
         &.hour, &.day, &.week {
             display: block;
-            border: f.rem(4) solid rgb(36, 15, 46);
+            border: f.rem(4) solid rgb(37, 30, 61);
         }
     }
     &__results {
@@ -74,7 +110,7 @@
         justify-content: center;
         align-items: center;
         color: rgb(255, 255, 255);
-        background-color: rgb(36, 15, 46);
+        background-color: rgba(37, 30, 61, 0.75);
         border-radius: f.rem(20);
         position: relative;
         &.place, &.avatar, &.name, &.total {
