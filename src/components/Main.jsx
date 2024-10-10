@@ -100,60 +100,60 @@ export default function Main() {
     }
     return(
         <div className="grid">
-            <div className="grid__head">
-                <div className="grid__head--name">Rating</div>
-                <button className="grid__head--info">i</button>
+            <div className="head">
+                <div className="head__name">Rating</div>
+                <button className="head__info">i</button>
             </div>
-            <div className="grid__leaders">
-                <div className="grid__leaders__first">
+            <div className="leaders">
+                <div className="leaders__first">
                     {/*<img src={getAvatar} />*/}
                     <img src={userAvatar} title="Winner" alt="Winner" />
-                    <div className="place">1</div>
+                    <div className="leaders__place leaders__place--gold">1</div>
                     {/*<div className="name">{userName}</div>*/}
-                    <div className="name">Amy Shepard</div>
+                    <div className="leaders__name leaders__name--gold">Amy Shepard</div>
                     {/*<div className="first-score">{totalScore}</div>*/}
-                    <div className="first-score">584</div>
+                    <div className="leaders__score leaders__score--first">584</div>
                 </div>
-                <div className="grid__leaders__second">
+                <div className="leaders__second">
                     {/*<img src={getAvatar} />*/}
                     <img src={userAvatar} title="Winner" alt="Winner" />
-                    <div className="place">2</div>
+                    <div className="leaders__place leaders__place--silver">2</div>
                     {/*<div className="name">{userName}</div>*/}
-                    <div className="name">M4XXX_P4YN3</div>
+                    <div className="leaders__name leaders__name--silver">M4XXX_P4YN3</div>
                     {/*<div className="first-score">{totalScore}</div>*/}
-                    <div className="second-score">560</div>
+                    <div className="leaders__score leaders__score--second">560</div>
                 </div>
-                <div className="grid__leaders__third">
+                <div className="leaders__third">
                     {/*<img src={getAvatar} />*/}
                     <img src={userAvatar} title="Winner" alt="Winner" />
-                    <div className="grid__leaders__third--place">3</div>
+                    <div className="leaders__place leaders__place--bronze">3</div>
                     {/*<div className="name">{userName}</div>*/}
-                    <div className="grid__leaders__third--name">KevinBacon416</div>
+                    <div className="leaders__name leaders__name--bronze">KevinBacon416</div>
                     {/*<div className="first-score">{totalScore}</div>*/}
-                    <div className="grid__leaders__third--third-score">515</div>
+                    <div className="leaders__score leaders__score--third">515</div>
                 </div>
             </div>
-            <div className="grid__info">
-                <button className="grid__info blocks"  ref={blocksRef}  onClick={handleInfoClick}>Blocks</button>
-                <button className="grid__info coins"   ref={coinsRef}   onClick={handleInfoClick}>Coins</button>
-                <button className="grid__info invites" ref={invitesRef} onClick={handleInfoClick}>Invites</button>
+            <div className="sort-info">
+                <button className="sort-info__blocks"  ref={blocksRef}  onClick={handleInfoClick}>Blocks</button>
+                <button className="sort-info__coins"   ref={coinsRef}   onClick={handleInfoClick}>Coins</button>
+                <button className="sort-info__invites" ref={invitesRef} onClick={handleInfoClick}>Invites</button>
             </div>
-            <div className="grid__time">
-                <button className="grid__time hour" ref={hourRef}  onClick={handleTimeClick}>Hour</button>
-                <button className="grid__time day"  ref={dayRef}   onClick={handleTimeClick}>Day</button>
-                <button className="grid__time week" ref={weekRef}  onClick={handleTimeClick}>Week</button>
+            <div className="sort-time">
+                <button className="sort-time__hour" ref={hourRef}  onClick={handleTimeClick}>Hour</button>
+                <button className="sort-time__day"  ref={dayRef}   onClick={handleTimeClick}>Day</button>
+                <button className="sort-time__week" ref={weekRef}  onClick={handleTimeClick}>Week</button>
             </div>
-            <div className="grid__results"></div>
-            <div className="grid__user-result">
+            <div className="results"></div>
+            <div className="user-result">
                 {/*<div className="grid__user-result place">{userPlace}</div>*/}
-                <div className="grid__user-result place">100+</div>
-                <div className="grid__user-result avatar">
+                <div className="user-result__place">100+</div>
+                <div className="user-result__avatar">
                     {/*<img src={getAvatar} />*/}
                     <img src={userAvatar} title="User avatar" alt="User avatar"/>
                 </div>
-                <div className="grid__user-result name">You</div>
+                <div className="user-result__name">You</div>
                 {/**<div className="grid__user-result total">{totalScore}</div>*/}
-                <div className="grid__user-result total">58</div>
+                <div className="user-result__total">58</div>
             </div>
         </div>
     );
