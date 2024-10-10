@@ -6,8 +6,9 @@
     gap: f.rem(10);
     background-color: rgb(60, 50, 100);
     width: 90vw;
+    height: 75vh;
     min-width: f.rem(230);
-    margin: f.rem(40) auto f.rem(40);
+    margin: 2vh auto;
     padding: f.rem(12);
     border-radius: f.rem(15);
     box-shadow: f.rem(0) f.rem(0) f.rem(40) rgb(0, 0, 0);
@@ -42,7 +43,7 @@
     background-color: rgba(49, 41, 78, 0.75);
     border-radius: f.rem(15);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     position: relative;
     &__first, &__second, &__third {
@@ -52,10 +53,10 @@
         justify-content: center;
         background-color: rgb(39, 32, 63);
         bottom: f.rem(15);
-        width: f.rem(135);
+        width: clamp(f.rem(10), 25.7vw, f.rem(600));
     }
     &__first {
-        height: f.rem(170);
+        height: clamp(f.rem(10), 18.2vh, f.rem(215));
         img {
             height: f.rem(65);
             position: absolute;
@@ -63,8 +64,8 @@
         }
     }
     &__second {
-        height: f.rem(155);
-        left: f.rem(0);
+        height: clamp(f.rem(10), 16.6vh, f.rem(200));
+        left: f.rem(15);
         img {
             height: f.rem(50);
             position: absolute;
@@ -72,8 +73,8 @@
         }
     }
     &__third {
-        height: f.rem(140);
-        right: f.rem(0);
+        height: clamp(f.rem(10), 15.2vh, f.rem(185));
+        right: f.rem(15);
         img {
             height: f.rem(50);
             position: absolute;
@@ -186,5 +187,29 @@
     }
     &__total {
         right: clamp(f.rem(20), f.rem(16) + 4vw, f.rem(60));
+    }
+}
+.nav {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(112, 66, 158);
+    &__shop, &__friends, &__main, &__earn, &__rating {
+        //position: absolute;
+        display: flex;
+        justify-content: center;
+        width: clamp(f.rem(10), 15vw, f.rem(360));
+        height: auto;
+        background-color: rgb(175, 148, 203);
+        border-radius: f.rem(10);
+        color: rgb(255, 255, 255);
+        box-shadow: f.rem(0) f.rem(0) f.rem(15) rgb(0, 0, 0);
+        img {
+            height: f.rem(50);
+            //position: absolute;
+            bottom: f.rem(15);
+        }
     }
 }
