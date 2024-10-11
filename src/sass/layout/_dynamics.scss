@@ -1,4 +1,19 @@
-.active {
+@use '../util/functions' as f;
+.active-sort {
     border: solid rgb(231, 89, 27) !important;
     background-color: rgb(231, 89, 27) !important;
+}
+.active-nav {
+    animation: active 1.5s forwards;
+}
+.prev-nav {
+    animation: prev 1.5s forwards;
+}
+@keyframes active {
+    0%{bottom: f.rem(16) + 1.7vw}
+    100%{bottom: 9vh}
+}
+@keyframes prev {
+    0%{bottom: 9vh}
+    100%{bottom: f.rem(16) + 1.7vw}
 }

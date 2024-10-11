@@ -8,42 +8,42 @@ import userAvatar from '../assets/bird.jpg';
  */
 export default function Main() {
     /**
-     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
+     * @type {React.RefObject<null | HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to a "blocks" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const blocksRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
+     * @type {React.RefObject<null | HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to a "coins" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const coinsRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
+     * @type {React.RefObject<null | HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to an "invites" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const invitesRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
+     * @type {React.RefObject<null | HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to an "hour" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const hourRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
+     * @type {React.RefObject<null | HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to a "day" button.
      * This reference is used to highlight the button while handling user clicks.
      */
     const dayRef = useRef(null);
 
     /**
-     * @type {React.RefObject<HTMLButtonElement>} Initially is null.
+     * @type {React.RefObject<null | HTMLButtonElement>} Initially is null.
      * @description A useRef() hook reference to a "week" button.
      * This reference is used to highlight the button while handling user clicks.
      */
@@ -57,19 +57,19 @@ export default function Main() {
     function handleInfoClick(event) {
         switch(true) {
             case event.target === blocksRef.current:
-                blocksRef.current.classList.add("active");
-                coinsRef.current.classList.remove("active");
-                invitesRef.current.classList.remove("active");
+                blocksRef.current.classList.add("active-sort");
+                coinsRef.current.classList.remove("active-sort");
+                invitesRef.current.classList.remove("active-sort");
                 break;
             case event.target === coinsRef.current:
-                coinsRef.current.classList.add("active");
-                blocksRef.current.classList.remove("active");
-                invitesRef.current.classList.remove("active");
+                coinsRef.current.classList.add("active-sort");
+                blocksRef.current.classList.remove("active-sort");
+                invitesRef.current.classList.remove("active-sort");
                 break;
             case event.target === invitesRef.current:
-                invitesRef.current.classList.add("active");
-                blocksRef.current.classList.remove("active");
-                coinsRef.current.classList.remove("active");
+                invitesRef.current.classList.add("active-sort");
+                blocksRef.current.classList.remove("active-sort");
+                coinsRef.current.classList.remove("active-sort");
                 break;
         }
     }
@@ -82,19 +82,19 @@ export default function Main() {
     function handleTimeClick(event) {
         switch(true) {
             case event.target === hourRef.current:
-                hourRef.current.classList.add("active");
-                dayRef.current.classList.remove("active");
-                weekRef.current.classList.remove("active");
+                hourRef.current.classList.add("active-sort");
+                dayRef.current.classList.remove("active-sort");
+                weekRef.current.classList.remove("active-sort");
                 break;
             case event.target === dayRef.current:
-                dayRef.current.classList.add("active");
-                hourRef.current.classList.remove("active");
-                weekRef.current.classList.remove("active");
+                dayRef.current.classList.add("active-sort");
+                hourRef.current.classList.remove("active-sort");
+                weekRef.current.classList.remove("active-sort");
                 break;
             case event.target === weekRef.current:
-                weekRef.current.classList.add("active");
-                dayRef.current.classList.remove("active");
-                hourRef.current.classList.remove("active");
+                weekRef.current.classList.add("active-sort");
+                dayRef.current.classList.remove("active-sort");
+                hourRef.current.classList.remove("active-sort");
                 break;
         }
     }

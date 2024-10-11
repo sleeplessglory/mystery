@@ -1,0 +1,56 @@
+@use '../util/functions' as f;
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: clamp(6vh, 12vw, 13vh);
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(112, 66, 158);
+    border-radius: 2.5vw 2.5vw 0 0;
+    &__shop, &__friends, &__main, &__earn, &__rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: clamp(f.rem(10), f.rem(12) + 12vw, 14vh);
+        height: clamp(f.rem(10), f.rem(12) + 12vw, 14vh);
+        background-color: rgb(175, 148, 203);
+        border-radius: f.rem(10);
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        box-shadow: f.rem(0) f.rem(12) f.rem(15) rgb(0, 0, 0);
+        position: relative;
+        bottom: clamp(1vw, f.rem(16) + 1.7vw, 7vh);
+        img {
+            width: clamp(f.rem(10), f.rem(10) + 9vw, 10vh);
+            bottom: clamp(f.rem(6), f.rem(7) + 1.5vw, 11vw);
+        }
+    }
+    &__text, img, &__soon {
+        position: absolute;
+    }
+    &__img {
+        &--main {
+            width: clamp(f.rem(12), f.rem(12) + 13vw, 16vh) !important;
+        }
+        &--shop {
+            opacity: 0.5;
+        }
+    }
+    &__text {
+        font-size: clamp(f.rem(6), f.rem(5) + 1vw, f.rem(48));
+        bottom: clamp(f.rem(1.5), f.rem(1.5) + 0.1vw, 11vw);
+        &--shop {
+            opacity: 0.5;
+        }
+    }
+    &__soon {
+        font-size: clamp(f.rem(6), f.rem(2) + 1.7vw, f.rem(56));
+        background-color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        width: clamp(f.rem(20), f.rem(50) + 10vw, f.rem(360));
+        padding: f.rem(7);
+        border-radius: f.rem(11);
+        transform: rotateZ(-15deg);
+    }
+}
