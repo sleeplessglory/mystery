@@ -1,4 +1,4 @@
-import Main from './Main.jsx';
+import Rating from './Rating/Rating.jsx';
 import Navigation from './Navigation.jsx';
 /**
  * @component
@@ -9,7 +9,7 @@ import Navigation from './Navigation.jsx';
 export default function App() {
     return(
         <>
-            <Main />
+            <Rating />
             <Navigation />
         </>
     );

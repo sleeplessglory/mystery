@@ -56,14 +56,13 @@ export default function Navigation() {
      */
     function handleNavClick(event) {
         switch(true) {
+            case event.currentTarget === shopRef.current || event.currentTarget === prevRef.current:
+                break;
             case prevRef.current === null:
                 prevRef.current = event.currentTarget;
                 event.currentTarget.classList.add("active-nav");
                 break;
-            case event.currentTarget === prevRef.current:
-                break;
             default:
-                shopRef.current.classList.remove("prev-nav");
                 friendsRef.current.classList.remove("prev-nav");
                 mainRef.current.classList.remove("prev-nav");
                 earnRef.current.classList.remove("prev-nav");

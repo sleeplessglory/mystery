@@ -2,7 +2,7 @@
 .grid {
     display: grid;
     grid-template-rows: 2fr 8fr 1fr 1fr 8fr 2fr;
-    gap: f.rem(10);
+    gap: var(--gap);
     background-color: rgb(60, 50, 100);
     width: clamp(f.rem(180), 90vw, 90vw);
     height: 75vh;
@@ -159,15 +159,55 @@
     }
 }
 .results {
-    border-radius: f.rem(15);
-    //display: grid;
-    //grid-template-rows: repeat(20, 2fr);
-    //gap: util.rem(10);
-    //overflow: auto;
+    display: grid;
+    grid-auto-rows: calc(26% - var(--gap));
+    gap: var(--gap);
+    overflow-y: scroll;
+    &__4th, &__5th, &__6th, &__7th, &__8th {
+        border-radius: f.rem(15);
+        background-color: rgb(49, 41, 78);
+        display: flex;
+        align-items: center;
+        margin-right: 2.5vw;
+        position: relative;
+        img {
+            height: clamp(f.rem(7), f.rem(13) + 1vw, f.rem(63));
+        }
+    }
+    &__place, &__avatar, &__name, &__total {
+        position: absolute;
+        font-size: clamp(f.rem(6), f.rem(6) + 1vw, f.rem(72));
+        color: rgb(255, 255, 255);
+    }
+    &__place {
+        left: 10%;
+    }
+    &__avatar {
+        left: 15%;
+    }
+    &__name {
+        left: 25%;
+    }
+    &__total {
+        right: 5%;
+    }
+}
+.results::-webkit-scrollbar {
+    width: 2vw;
+}
+.results::-webkit-scrollbar-thumb {
+    background-color: rgb(230, 91, 32);
+    border-radius: clamp(f.rem(8), f.rem(8) + 1.4vw, f.rem(64));
+}
+.results::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(188, 71, 21);
+}
+.results::-webkit-scrollbar-track {
+    background-color: rgba(49, 41, 78, 0.75);
+    border-radius: clamp(f.rem(8), f.rem(8) + 1.4vw, f.rem(64));
 }
 .user-result {
     display: flex;
-    justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
     background-color: rgba(37, 30, 61, 0.75);
@@ -179,11 +219,11 @@
         font-size: clamp(f.rem(8), f.rem(8) + 1.4vw, f.rem(64));
     }
     &__place {
-        left: 5%;
+        left: 7%;
     }
     &__avatar {
         position: absolute;
-        left: 18%;
+        left: 20%;
         img {
             height: clamp(f.rem(8), f.rem(14) + 1.5vw, f.rem(64));
         }
